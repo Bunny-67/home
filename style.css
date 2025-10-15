@@ -1,0 +1,325 @@
+
+@font-face {
+    font-family: WarsawGothicExtended3D; 
+    src:url("WarsawGothicExtended3D-2q78.otf");
+}
+@font-face {
+    font-family: WarsawGothicExtendedOutline; 
+    src:url("WarsawGothicExtendedOutline-7q9V.otf");
+}
+@font-face {
+    font-family: WarsawGothicExtended; 
+    src:url("WarsawGothicExtended-K2Bo.otf");
+}
+
+
+body {
+    background-color: rgb(20, 20, 20);
+    color: rgb(255,255,255);
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 25vh;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(footercard.png);
+    background-repeat: no-repeat;
+    background-size: 100vw auto;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    height: fit-content;
+    min-height: 50vh;
+    left: 0;
+    bottom: 0;
+}
+
+
+    .button2 {
+        background-color: rgb(118, 126, 126);
+        border: none;
+        color:white;
+        padding: 10px 24px;
+        list-style: none;
+        clear: both;
+        outline: none;
+        float: left;
+
+        text-align: center;
+        font-size: 20px;
+        font-family: "ISOCTEUR V1";
+        text-decoration: none;
+        text-transform: uppercase;
+
+        transition-duration: 0.3s;
+        cursor: pointer;        
+        }
+    .button2:hover {
+        background-color: rgb(131, 197, 197);
+        border: none;
+        color:rgb(0, 0, 0);
+        box-shadow: 5px 5px 2px black;
+        padding: 10px 24px;
+
+        text-align: center;
+        font-size: 20px;
+        
+        cursor: pointer;      
+        }
+    #homelinkbutton {
+        background-color: rgb(0, 0, 0);
+        border: none;
+        color:white;
+        list-style: none;
+        outline: none;
+        padding-bottom: 10px;
+
+        text-align: center;
+        font-size: 15px;
+        font-family: "ISOCTEUR V1";
+        text-decoration: none;
+
+        display: inline-block;
+    }
+
+
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+    }
+    .column {
+        background-color: rgba(0, 0, 0, 0);
+        padding: 0;
+        flex: 1;
+        align-items: center;
+    }
+
+
+    #foot_txt {
+        color:white;
+        font-family:Arial, Helvetica, sans-serif;
+        line-height: 2vh;
+        position: absolute;
+        bottom: 200px;
+        left: 44.9vw;
+    }
+    #foot_txt2 {
+        color:rgb(46, 46, 46);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: x-small;
+        text-align: left;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+    }
+    #txt_ind {
+        text-indent: 25px;
+    }
+    .icon-anim {
+        transform: scale(0.75);
+    }
+    .icon-anim:hover {
+        transform: scale(1);
+    }
+
+        .div0 {
+            width: 100%;
+            height: 1vw;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .div1 {
+            width: 100%;
+            height: 3vw;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .div2 {
+            width: 100%;
+            height: 5vw;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .div3 {
+            width: 100%;
+            height: 10vw;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .div4 {
+            width: 100%;
+            height: 15vw;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .divF {
+            width: 100%;
+            height: 7vw;
+            position: relative;
+
+        }
+
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .image {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .fullscreen-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        
+        #fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        #close-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+    @media only screen and (max-width: 768px) {
+
+        .row {
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex-basis: 100%;
+        }
+        
+
+        .responsive {
+            transform: scale(.4);
+        }
+        .mobileview {
+            margin-top: -250px;
+        }
+        .mobiledel {
+            display: none;
+        }
+
+        .button2 {
+            background-color: rgb(118, 126, 126);
+            border: none;
+            color:white;
+            padding: 10px 24px;
+            list-style: none;
+            clear: both;
+            outline: none;
+            float: left;
+    
+            text-align: center;
+            font-size: 3vw;
+            font-family: "ISOCTEUR V1";
+            text-decoration: none;     
+            }
+
+        .mobilediv0 {
+            width: 100%;
+            height: 10px;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .mobilediv1 {
+            width: 100%;
+            height: 50px;
+            background-color: #ffffff00;
+            position: relative;
+        }
+        .mobilediv2 {
+            width: 100%;
+            height: 20vh;
+            background-color: #ffffff00;
+            position: relative;
+        }
+
+        .gallery {
+            max-width: 95%;
+        }
+
+    }
+
+
+
+
+    @media print {
+
+        *{
+            background: transparent !important;
+            color: rgb(0, 0, 0) !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 1in 1in 1in 1in;
+        }
+
+        .footer {
+            background: transparent !important;
+            color: rgb(0, 0, 0) !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+        }
+
+        .demoreel-box {
+            display: none !important;
+        }
+        #headshot_box {
+            display: none;
+        }
+        
+    }
+
+
+
+
+
+
+
+

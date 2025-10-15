@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--
+
+*****************************************************************************
+
+Title:  Home Page
+
+Use:  Main page of the site.
+
+Author:  Ian Ray
+
+School/Term:  Univ of Missouri, Fall 2023
+
+Developed: Sep 2, 2023
+
+Tested:  Sep 2, 2023; Passed on Chrome.
+
+******************************************************************************
+
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="nav.css">
+     <script src="java.js"></script>
+
+     <link rel="shortcut icon" type="image/x-icon" href="faviconv2.ico">
+
+    <link href="https://db.onlinewebfonts.com/c/037a670cefc97958beb036dab0f6e254?family=Bodoni+MT" rel="stylesheet"> <!--font-family: "Bodoni MT";-->
+    <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet"> <!--font-family: "ISOCTEUR V1";-->
+    <link href="https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script" rel="stylesheet"> <!--font-family: "Clicker Script";-->
+    <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet"> <!--font-family: "Montserrat";-->
+
+    <style>
+
+        .indbody {
+            background-image: url(webcardindext.png), linear-gradient(to right, rgb(11, 21, 41), rgb(11, 21, 47), rgb(11, 21, 41));
+            background-position: top, bottom;
+            background-size: 100vw auto, 100vw auto;
+            background-position-y: 5rem;
+            background-repeat: no-repeat, repeat;
+            min-height: 100vh;
+            color: rgb(255,255,255);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+         #welcome_msg {
+             color:white;
+             font-family: "ISOCTEUR V1";
+             font-size: 1.7vw;
+             line-height: 7vw;
+             font-weight: 100;
+             text-align: left;
+             letter-spacing: 1.25vw;
+             padding: .5vw 1vw;
+         }
+
+         #intro_para {
+             color:rgb(0, 0, 0);
+             font-family: "Montserrat";
+             text-align: left;
+             max-width: 35vw;
+             font-size: 1.25vw;
+             font-weight: 200;
+             line-height: 2vw;
+             text-indent: 2vw;
+             padding-left: 6vw;
+         }
+
+         .artststbtn a {
+            background-color: rgb(64, 64, 64);
+            position: absolute;
+            border: none;
+            text-align: center;
+            font-family: "ISOCTEUR V1";
+            text-transform: uppercase;
+            top: 8rem;
+            right: 4rem;
+            z-index: 0;
+            text-decoration: none; 
+            color: rgb(255, 255, 255); 
+            padding: 10px 50px;
+
+            transition-duration: 0.3s;
+            cursor: pointer;           
+         }
+         .artststbtn a:hover {
+            background-color: rgb(44, 165, 173);
+            box-shadow: 0px 3px 1px rgb(255, 255, 255);
+         }
+
+         .projtxt {
+            background-color: beige;
+            color:black;
+            width: 60%;
+            height: fit-content;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feat_vids {
+            height: 35%;
+            width: 100%;
+            background-color: rgb(0, 0, 0, 0);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+        }
+        #feat_vid {
+            height: 12.5vw;
+            width: 25vw;
+            margin: 1vw;
+        }
+        #feat_vids_header {
+            font-size: x-large;
+            text-align: center;
+            font-family: "ISOCTEUR V1";
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+
+         @media only screen and (max-width:1024px) {
+            .feat_vids {
+            height: 35%;
+            width: 100%;
+            }
+            #feat_vid {
+            height: 10vw;
+            width: 20vw;
+            margin: 1vw;
+            }
+            #feat_vids_header {
+            font-size: large;
+            }
+         }
+         @media only screen and (max-width:768px) {
+            .indbody {
+                background-image: url(webcardind_mobile.png), linear-gradient(to right, rgb(11, 21, 41), rgb(11, 21, 47), rgb(11, 21, 41));
+                background-position: top, bottom;
+                background-size: 100vw auto, 100vw auto;
+                background-position-y: 5rem;
+                background-repeat: no-repeat, repeat;
+                min-height: 1200px;
+                z-index: 0;
+            }
+            #welcome_msg {
+             font-size: 7vw;
+             line-height: 10.5vw;
+             font-weight: 300;
+             text-align: left;
+             letter-spacing: 1.25vw;
+             padding: 3vw 1.5vw;
+            }
+
+            #intro_para {
+                text-align: left;
+                font-size: 4vw;
+                font-weight: 400;
+                line-height: 7vw;
+                text-indent: 10vw;
+                padding-left: 1.5vw;
+                max-width: 100vw;
+                background: -webkit-linear-gradient(rgb(15, 15, 15), rgb(0, 0, 0));
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .artststbtn {
+                display: block;
+                width: 100%;
+                height: 85px;
+                background-color: rgb(64, 64, 64);
+                border: none;
+            }
+            .artststbtn a {
+            position: relative;
+            border: none;
+            text-align: center;
+            font-family: "ISOCTEUR V1";
+            top: 0vh;
+            left: 0vw;
+            min-width: 100%;
+            z-index: 0;
+            text-decoration: none; 
+            color: rgb(255, 255, 255); 
+            padding: 30px 30vw;
+            font-size: 2.5vw;
+
+            transition-duration: 0.3s;
+            cursor: pointer;           
+         }
+         .artststbtn a:hover {
+            background-color: rgb(64,64,64);
+            box-shadow: 0px 0px 0px rgb(255, 255, 255);
+         }
+
+         }
+
+
+         
+     </style>
+</head>
+
+<body class="indbody">
+    
+    <header>  
+        <div id="brand"><a href="/ISLT_7310/index">ianrayediting.com</a></div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/ISLT_7310/about">About</a></li>
+                    <li class="drop-menu-btn"><a href="#">Projects</a>
+                        <ul class="drop-menu-content"> 
+                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
+                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
+                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
+                        </ul>
+                    </li>
+                    <li style="margin-right: 3.5vw;"><a href="/ISLT_7310/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon", oninput="toggleMobileMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li><a href="/ISLT_7310/index">Home</a></li>
+                    <li><a href="/ISLT_7310/about">About</a></li>
+                    <li><a href="/ISLT_7310/contact">Contact</a></li>
+
+                            <li id="mobile-sub-menu-btn" oninput="toggleMobileSubMenu(this)">
+                                    <a href="#">Projects  +</a>
+                                    <ul class="mobile-sub-menu">
+                                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
+                                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
+                                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
+                                    </ul>
+                            </li>
+                </ul>
+
+            </div>
+
+    </header>
+
+    <main>
+
+
+            <p id="welcome_msg">
+
+                WELCOME,<br>
+                I AM IAN RAY <br>
+                A DIGITAL MEDIA SPECIALIST<br>
+                AND THIS IS MY 
+                DIGITAL PORTFOLIO<br>
+
+            </p>    
+
+
+            <div>
+                <button class="artststbtn">
+                    <a href="/ISLT_7310/reflection">Artist Statement</a>
+                </button>
+            </div>
+
+                <p id="feat_vids_header">Featured Videos</p>
+                <div class="feat_vids">
+                    <iframe id="feat_vid" 
+                        src="https://www.youtube.com/embed/vHhr2saE1zI?si=LRJrSsU24hMOKDSU" 
+                        title="Ian Ray Video Editing Demo Reel"  
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <iframe id="feat_vid" 
+                        src="https://www.youtube.com/embed/FPG41p23sgQ?si=3a_6HGJ5flcyE0ON" 
+                        title="Harmony Chiropractic: The Effects of Stress" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <iframe id="feat_vid" 
+                        src="https://www.youtube.com/embed/EJCi-t1pBEk?si=1gdNz-hTiFf-XILl" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    <iframe id="feat_vid" 
+                        src="https://www.youtube.com/embed/UlNQpTOb8-8?si=QQuOr46xviKqVy4W" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="div4"></div>
+                <div class="div2"></div>
+
+
+            <p id="intro_para">    
+                For the last five years, as a freelance digital media  specialist,
+                have been  working hard to provide my clients quality work for 
+                their individual endeavors. This portfolio site contains the work I 
+                created for them as well as some of the personal work that I 
+                have done. As a media specialist I aim to have the ability to create any 
+                form of digital media that one could need to pursue their desired online 
+                presence. I have worked in photography, videography, graphic design, 
+                animation, website design, social media marketing, and more. With 
+                proficiencies in the Adobe Creative Suite, I strive to be prepared for
+                my clients' digital needs without having to outsource any work. 
+                I like to take a personal and attentive approach to my creations, 
+                and truly deliver content that benefits the client.
+            </p>
+            
+
+    </main>   
+
+        <div class="div2"></div>
+        <div class="mobilediv0"></div>
+
+
+    <footer class="footer">
+        <div class="divF"></div>
+
+        <a href="/ISLT_7310/contact"><img src="emailicon.png" alt="Email" class="icon-anim" style="width:50px;height:50px;"></a>
+        <a href="/ISLT_7310/contact"><img src="phoneicon.png" alt="Phone" class="icon-anim" style="width:50px;height:50px;"></a>
+        <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" style="width:50px;height:50px;"></a>
+
+
+    <p id="foot_txt">
+    Ian Ray <br>
+    Email: <br>
+    ianray.editing@gmail.com<br>
+    idry9v@umsystem.edu <br>
+    </p>
+    <p id="foot_txt2">
+                DISCLAIMER <br>
+                September 01, 2023 <br>
+                <br>
+                The information provided by Ian Ray Editing on https://ianrayediting.com is for general informational purposes only. All information on the Site <br>
+                is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, <br>
+                reliability, availability, or completeness of any information on the Site. <br>
+                UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE <br>
+                ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
+    </p>
+    </footer> 
+
+    </body>
+
+</html>
