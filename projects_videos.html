@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--
+
+*****************************************************************************
+
+Title:  Videos Project Page
+
+Use:  
+
+Author:  Ian Ray
+
+School/Term:  Univ of Missouri, Fall 2023
+
+Developed: Sep 12, 2023
+
+Tested:  Sep 12, 2023; Passed on Chrome.
+
+******************************************************************************
+
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <script src="java.js"></script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="faviconv2.ico">
+
+  <link href="https://db.onlinewebfonts.com/c/037a670cefc97958beb036dab0f6e254?family=Bodoni+MT" rel="stylesheet"> <!--font-family: "Bodoni MT";-->
+  <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet"> <!--font-family: "ISOCTEUR V1";-->
+  <link href="https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script" rel="stylesheet"> <!--font-family: "Clicker Script";-->
+  <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet"> <!--font-family: "Montserrat";-->
+
+    <style>
+
+        #title {
+            color:#ffffff;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        h5 {color:lightgray;}
+
+
+
+        #harmony-box-1 {
+          height: 50vh; width: 100vw;
+          margin-top: 1vh;
+          background-color: rgb(0,0,0,0);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        #harmony-vid1 {
+          width: 45vw; height: 25vw;
+          margin-top: 1%;
+          margin-left: 1%;
+        }
+        #harmony-txt {
+          max-width: 50%;
+          text-align: left;
+          padding: 50px;
+          font-family: "Montserrat";
+          font-weight: 300;
+          font-size: 1.25vw;
+          line-height: 3vh;
+          text-wrap: wrap;
+          margin-top: 3vh;
+          text-indent: 2vw;
+        }
+
+        .demoreel-box {
+            height: 85vh; width: 70vw;
+            margin-top: calc(5rem + 2vh);
+        }
+
+        .feat_vids {
+            height: 35%;
+            width: 100%;
+            background-color: rgb(0, 0, 0, 0);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+        }
+        #feat_vid1 {
+            height: 250px;
+            width: 400px;
+            margin: 25px;
+        }
+        #feat_vids_header {
+            font-size: x-large;
+            text-align: center;
+            font-family: "ISOCTEUR V1";
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 2px;
+            margin-bottom: 5px;
+        }
+
+
+
+        @media only screen and (max-width:1200px) {
+          #harmony-txt {
+            font-size: 2vw;
+            font-weight: 500;
+            max-width: 50%;
+            text-indent: 3vw;
+            padding: 25px;
+          }
+        }
+
+        @media only screen and (max-width:1024px) {
+
+          .feat_vids {
+            height: 35%;
+            width: 100%;
+            }
+            #feat_vid {
+            height: 10vw;
+            width: 20vw;
+            margin: 1vw;
+            }
+            #feat_vids_header {
+            font-size: large;
+            }
+            .demoreel-box {
+            height: 50vh; width: 100vw;
+            margin-top: calc(5rem + 2vh);
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+          #harmony-box-1 {
+            flex-direction: column;
+            justify-content: center;
+            height: fit-content;
+          }
+          #harmony-vid1 {
+            margin-top: 5vh;
+            margin-left: 5vw;
+            width: 90vw;
+            height: 45vw;
+          }
+          #harmony-txt {
+            font-size: 3.5vw;
+            font-weight: 600;
+            max-width: 100%;
+            text-indent: 5vw;
+            padding: 25px;
+          }
+
+          .demoreel-box {
+            height: 45vh; width: 90vw;
+            margin-top: calc(5rem + 2vh);
+            margin-left: 5vw;
+            }
+        }
+
+  </style>
+</head>
+
+
+
+<body style="background-image: linear-gradient(180deg, rgb(20,20,20),rgb(20,20,20),rgb(5,5,5),rgb(0,0,0),rgb(0,0,0)); min-height: 100vh;">
+  <header>  
+    <div id="brand"><a href="/">ianrayediting.com</a></div>
+        <nav class="navbar">
+            <ul>
+                <li style="margin-left: 3.5vw;"><a href="/ISLT_7310/index">Home</a></li>
+                <li><a href="/ISLT_7310/about">About</a></li>
+                <li class="drop-menu-btn"><a href="#">Projects</a>
+                    <ul class="drop-menu-content"> 
+                        <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
+                        <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
+                        <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
+                    </ul>
+                </li>
+                <li style="margin-right: 3.5vw;"><a href="/ISLT_7310/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon", oninput="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="/ISLT_7310/index">Home</a></li>
+                <li><a href="/ISLT_7310/about">About</a></li>
+                <li><a href="/ISLT_7310/contact">Contact</a></li>
+
+                        <li id="mobile-sub-menu-btn" oninput="toggleMobileSubMenu(this)">
+                                <a href="#">Projects  +</a>
+                                <ul class="mobile-sub-menu">
+                                        <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
+                                        <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
+                                        <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
+                                </ul>
+                        </li>
+            </ul>
+
+        </div>
+
+  </header>
+
+
+    <main>
+              <div class="row">
+                <div class="column">
+                    <div class="demoreel-box">
+                        <iframe
+                            width="100%" height="100%" 
+                            src="https://www.youtube.com/embed/vHhr2saE1zI?si=LRJrSsU24hMOKDSU" 
+                            title="Ian Ray Video Editing Demo Reel" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div2"></div>
+
+            <div id="harmony-box-1">
+              <iframe id="harmony-vid1" 
+                  src="https://www.youtube.com/embed/d5ehUjKRC3c?si=jXY1zyYvraUAuX75" 
+                  title="Harmony Chiropractic Testimonial Ad" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+
+              <p id="harmony-txt">
+                In this project, I had the opportunity to create media for Harmony Chiropractic, 
+                a chiropractic firm in South Elgin, IL. For this I took on all of the roles
+                necessary to produce a finished video product, including directing, filming, 
+                lighting, sound design, video editing and graphic creation. I filmed and edited 
+                8 total videos spanning 30sec to 2min. Harmony has used these 
+                videos to market on their Facebook and Instagram pages. Additionally, it was a 
+                great chance to branch into a new category of both filming and editing styles. 
+                The project lasted 6 months in total and utilized Adobe Premiere, Photoshop, and 
+                Audition.
+              </p>
+            </div>
+            
+            <div class="div0"></div>
+
+            <div class="feat_vids">
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/Esj9KbX3wzQ?si=rTY6-LsD_AzOKmrQ" 
+                  title="Harmony Chiropractic: Timing"  
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/hWll2XgnPUQ?si=oxk2XyG3YcnVpg_x" 
+                  title="Harmony Chiropractic: Aging" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/msdEOLwOlTo?si=vuudQgAQ06BvHu-C" 
+                  title="Harmony Chiropractic: Laser Therapy" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/LvGG8jJ0jEU?si=RDHxI_NVQFS_77Sl" 
+                  title="Harmony Chiropractic: Mental Health" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+          </div>
+
+            <div class="div4"></div>
+            <div class="div2"></div>
+
+            <p id="feat_vids_header">Featured Videos</p>
+            <div class="feat_vids">
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/06sXTHuIuhc?si=V6ROZ09n5KH7LW3B" 
+                  title="James Larkin Genealogy Mini-Documentary"  
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/FPG41p23sgQ?si=3a_6HGJ5flcyE0ON" 
+                  title="Harmony Chiropractic: The Effects of Stress" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/EJCi-t1pBEk?si=1gdNz-hTiFf-XILl" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+              <iframe id="feat_vid1" 
+                  src="https://www.youtube.com/embed/UlNQpTOb8-8?si=QQuOr46xviKqVy4W" 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+              </iframe>
+          </div>
+
+          <div class="div4"></div>
+          <div class="div2"></div>
+
+          <p id="feat_vids_header">More Videos</p>
+          <div class="feat_vids">
+            <iframe id="feat_vid1" 
+                src="https://www.youtube.com/embed/vpHDDs5ocVw?si=6XBAYILkN0-ZHQQq" 
+                title="YouTube video player"  
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <iframe id="feat_vid1" 
+                src="https://www.youtube.com/embed/hTNwvjvubrE?si=RM0VJWT54fhOHSPl" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <iframe id="feat_vid1" 
+                src="https://www.youtube.com/embed/w0lrqZcQz6E?si=ZMiZ9-mN2qeNU8R7" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+            <iframe id="feat_vid1" 
+                src="https://www.youtube.com/embed/sarKYqx1Xlc?si=hI0KhWlBVvD7yjo5" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="div4"></div>
+        <div class="div0"></div>
+
+        <div class="feat_vids">
+          <iframe id="feat_vid1" 
+              src="https://www.youtube.com/embed/RBjC5qAqdRY?si=eeuGnILlSZbf4uD5" 
+              title="YouTube video player"  
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+          <iframe id="feat_vid1" 
+              src="https://www.youtube.com/embed/lWZQUHMHZL0?si=vz6z5eTXzYjA7tXT" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+          <iframe id="feat_vid1" 
+              src="https://www.youtube.com/embed/ePZC6oz7QcQ?si=pcSVm4ef6EV5fDup" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+          <iframe id="feat_vid1" 
+              src="https://www.youtube.com/embed/qM_HU317k8U?si=2PllBdQ3Ux9iOMiw" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+          </iframe>
+      </div>
+            <div class="div4"></div>
+    </main>   
+           
+
+    <footer class="footer">
+      <div class="divF"></div>
+
+      <a href="/ISLT_7310/contact"><img src="emailicon.png" alt="Email" class="icon-anim" style="width:50px;height:50px;"></a>
+      <a href="/ISLT_7310/contact"><img src="phoneicon.png" alt="Phone" class="icon-anim" style="width:50px;height:50px;"></a>
+      <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" style="width:50px;height:50px;"></a>
+
+
+  <p id="foot_txt">
+  Ian Ray <br>
+  Email: <br>
+  ianray.editing@gmail.com<br>
+  idry9v@umsystem.edu <br>
+  </p>
+  <p id="foot_txt2">
+              DISCLAIMER <br>
+              September 01, 2023 <br>
+              <br>
+              The information provided by Ian Ray Editing on https://ianrayediting.com is for general informational purposes only. All information on the Site <br>
+              is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, <br>
+              reliability, availability, or completeness of any information on the Site. <br>
+              UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE <br>
+              ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
+  </p>
+  </footer>  
+</body>
+
+
+</html>
+
+
+

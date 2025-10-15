@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--
+
+*****************************************************************************
+
+Title:  Template Page
+
+Use:  Main page of the site.
+
+Author:  Ian Ray
+
+School/Term:  Univ of Missouri, Fall 2023
+
+Developed: Sep 2, 2023
+
+Tested:  Sep 2, 2023; Passed on Chrome.
+
+******************************************************************************
+
+-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Services</title>
+
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="nav.css">
+     <script src="java.js"></script>
+
+     <link rel="shortcut icon" type="image/x-icon" href="faviconv2.ico">
+
+    <link href="https://db.onlinewebfonts.com/c/037a670cefc97958beb036dab0f6e254?family=Bodoni+MT" rel="stylesheet"> <!--font-family: "Bodoni MT";-->
+    <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet"> <!--font-family: "ISOCTEUR V1";-->
+    <link href="https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script" rel="stylesheet"> <!--font-family: "Clicker Script";-->
+    <link href="https://db.onlinewebfonts.com/c/a81c6ef023e90fb9f87ac017d242a337?family=Montserrat" rel="stylesheet"> <!--font-family: "Montserrat";-->
+
+    <style>
+
+        #serv-tbl {
+            width: 50%;
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-top: 5vh;
+            font-family: "Montserrat";
+            color: rgb(255,255,255);
+            text-align: left;
+            
+        }
+        #serv-tbl thead {
+            height: fit-content;
+            background-color: rgb(0,0,0);
+            font-size: 1.25vw;
+            font-weight: 400;
+        }
+        #serv-tbl tbody {
+            background-color: rgb(50,50,50);
+            font-size: 1vw;
+            font-weight: 300;
+        }
+        #serv-tbl td {
+            padding-left: 10px;
+            padding-right: 5px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            text-wrap: wrap;
+        }
+        #serv-tbl th {
+            padding-left: 10px;
+            padding-right: 5px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            text-wrap: nowrap;
+        }
+        #tbld {
+            font-weight: bold;
+        }
+
+        #formbox {
+            height: fit-content;
+            width: 40vw;
+            padding: 30px;
+            background-color: rgb(50,50,50);
+            margin-left: 30vw;
+            margin-right: 30vw;
+            margin-top: 5vh;
+            font-family: "Montserrat";
+            font-size: 1vw;
+            font-weight: bold;
+        }
+        #srvc-chkbox {
+            margin-left: 0.5vw;
+            margin-top: 3px;
+            margin-bottom: 5px;
+            font-size: .75vw;
+            line-height: 1.75vh;
+        }
+        #sub-btn {
+            float: right; 
+            color: rgb(255,255,255);
+            background-color: rgb(0,0,0);
+            border: none;
+            width: 5vw;
+            height: 1.5vw;
+            font-family: "Montserrat";
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: .75vw;
+
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        #sub-btn:hover {
+            background-color: rgba(37, 190, 190, 1);
+            box-shadow: 0px 2px 0px rgb(255,255,255);
+        }
+        #form-gap1 {
+            color: rgba(200,200,200,0.75); 
+            margin-right: 17.5%;
+        }
+        #form-gap2 {
+            color: rgba(200,200,200,0.75); 
+            margin-right: 24%;
+        }
+
+        @media only screen and (max-width:1500px) {
+            #serv-tbl {
+                width: 75%;
+                margin-left: 12.5%;
+                margin-right: 12.5%;
+            }
+            #serv-tbl thead {
+                font-size: 1.75vw;
+                font-weight: 500;
+            }
+            #serv-tbl tbody {
+                font-size: 1.5vw;
+                font-weight: 300;
+            }
+
+            #formbox {
+                width: 60%;
+                margin-left: 20%;
+                margin-right: 20%;
+                font-size: 1.5vw;
+            }
+            #srvc-chkbox {
+                margin-left: 4.5vw;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                font-size: 1vw;
+                line-height: 1.75vh;
+                transform: scale(1.15);
+            }
+            #sub-btn {
+                width: 7vw;
+                height: 3vw;
+                font-size: 1vw;
+            }
+            #form-gap1 {
+                margin-right: 17%;
+            }
+            #form-gap2 {
+                margin-right: 23.5%;
+            }
+
+
+        }
+         @media only screen and (max-width:768px) {
+            #serv-tbl {
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            #serv-tbl thead {
+                font-size: 3vw;
+                font-weight: 500;
+            }
+            #serv-tbl tbody {
+                font-size: 2.5vw;
+                font-weight: 300;
+            }
+
+
+            #formbox {
+                width: 90%;
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 2.5vw;
+            }
+            #srvc-chkbox {
+                margin-left: 10vw;
+                margin-top: 15px;
+                margin-bottom: 10px;
+                font-size: 2vw;
+                line-height: 2vh;
+                transform: scale(1.25);
+            }
+            #sub-btn {
+                width: 15vw;
+                height: 5vw;
+                font-size: 2.5vw;
+            }
+            #form-gap1 {
+                margin-right: 12%;
+            }
+            #form-gap2 {
+                margin-right: 20%;
+            }
+         }
+         
+     </style>
+
+        <Simple Browser: Show></Simple> 
+
+</head>
+
+<body>
+    
+    <header>  
+        <div id="brand"><a href="/ISLT_7310/index">ianrayediting.com</a></div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/ISLT_7310/index">Home</a></li>
+                    <li><a href="/ISLT_7310/about">About</a></li>
+                    <li class="drop-menu-btn" style="margin-right: 3.5vw;"><a href="#">Projects</a>
+                        <ul class="drop-menu-content"> 
+                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
+                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
+                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div id="hamburger-icon", oninput="toggleMobileMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <ul class="mobile-menu">
+                    <li><a href="/ISLT_7310/index">Home</a></li>
+                    <li><a href="/ISLT_7310/about">About</a></li>
+                    <li><a href="/ISLT_7310/contact">Contact</a></li>
+
+                            <li id="mobile-sub-menu-btn" oninput="toggleMobileSubMenu(this)">
+                                    <a href="#">Projects  +</a>
+                                    <ul class="mobile-sub-menu">
+                                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
+                                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
+                                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
+                                    </ul>
+                            </li>
+                </ul>
+
+            </div>
+
+    </header>
+
+    <main>
+
+        <table id="serv-tbl">
+            <thead>
+                <tr>
+                    <th>Media Services</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="tbld">Video</td>
+                    <td>Video services can include anything 
+                        from on-site filming to editing, graphics, 
+                        image and sound design, special effects and 
+                        more. I like to 
+                        offer a wide range of videography skills 
+                        that can meet the needs of any client.</td>
+                </tr>
+                <tr>
+                    <td id="tbld">Photo</td>
+                    <td>Photography services include portrait photography,
+                        event photography, product photography, corporate 
+                        photography, sports photography, pet photography,
+                        and more. All services also include photo editing,
+                        library orginization, and the finished medium(s)
+                         of choice.</td>
+                </tr>
+                <tr>
+                    <td id="tbld">Graphic Design</td>
+                    <td>As a digital media specialist I offer a wide range of graphic 
+                        design services tailored for the digital world. I can 
+                        create visuals for social media, websites, infographics, news segments, 
+                        print media, presentations, and more. I create these designs 
+                        to match the client's brand and messaging and produce noticable results.</td>
+                </tr>
+                <tr>
+                    <td id="tbld">Web Design & Development</td>
+                    <td>I provide web design and 
+                        development services to create and enhance websites. 
+                        In development I strive to design user-friendly and visually appealing websites, 
+                        ensuring a seamless user experience. I can handle the 
+                        technical aspects, such as coding and functionality, to 
+                        make sure the website runs smoothly and performs well, as
+                        well as the design elements to make a smooth and engaging site.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div id="formbox">
+            <form action="mailto:ianray.editing@gmail.com?Subject=Website%20Conact%20Form" method="post" enctype="text/plain">
+                <label for="fname">First name:</label><span id="form-gap1">(required)</span>
+                <label for="lname">Last name:</label><span style="color: rgba(200,200,200,0.75);">(required)</span><br>
+                <input style="width:45%;" type="text" id="fname" name="fname" required>
+                <input style="width:45%;" type="text" id="lname" name="lname" required><br>
+                <br>
+                <label for="eml">Email:</label><span id="form-gap2">(required)</span>
+                <label for="phn">Phone:</label><br>
+                <input style="width:45%;" type="text" id="eml" name="eml" required>
+                <input style="width:45%;" type="text" id="phn" name="phn"><br>
+                <br>
+                <p>Service Inquiry</p>
+                <div id="srvc-chkbox">
+                    <input style="transform: translateY(2px);" type="checkbox" id="srvc1" name="srvc1" value="Video">
+                    <label for="srvc1"> Video</label><br>
+                    <input style="transform: translateY(2px);" type="checkbox" id="srvc2" name="srvc2" value="Photo">
+                    <label for="srvc2"> Photo</label><br>
+                    <input style="transform: translateY(2px);" type="checkbox" id="srvc3" name="srvc3" value="Graphic">
+                    <label for="srvc3"> Graphic Design</label><br>
+                    <input style="transform: translateY(2px);" type="checkbox" id="srvc4" name="srvc4" value="Web">
+                    <label for="srvc4"> Web Design & Development</label><br>
+                    <input style="transform: translateY(2px);" type="checkbox" id="srvc5" name="srvc5" value="Other:">
+                    <label for="srvc5"> Other:</label><br>
+                    <input style="transform: translateY(2px); width:30%;" type="text" id="other" name="other"><br>
+                </div>
+                <br>
+                <label> Message:</label><br>
+                <textarea name="message" style="width:100%;height: 5vh;"></textarea><br>
+                <br>
+                <input id="sub-btn" type="submit" value="Submit">
+                <br>
+            </form>
+        </div>
+
+    </main>   
+
+        <div class="div1"></div>
+        <div class="mobilediv0"></div>
+
+
+    <footer class="footer">
+        <div class="divF"></div>
+
+        <a href="/ISLT_7310/contact"><img src="emailicon.png" alt="Email" class="icon-anim" style="width:50px;height:50px;"></a>
+        <a href="/ISLT_7310/contact"><img src="phoneicon.png" alt="Phone" class="icon-anim" style="width:50px;height:50px;"></a>
+        <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" style="width:50px;height:50px;"></a>
+
+
+    <p id="foot_txt">
+    Ian Ray <br>
+    Email: <br>
+    ianray.editing@gmail.com<br>
+    idry9v@umsystem.edu <br>
+    </p>
+    <p id="foot_txt2">
+                DISCLAIMER <br>
+                September 01, 2023 <br>
+                <br>
+                The information provided by Ian Ray Editing on https://ianrayediting.com is for general informational purposes only. All information on the Site <br>
+                is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, <br>
+                reliability, availability, or completeness of any information on the Site. <br>
+                UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE <br>
+                ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
+    </p>
+    </footer> 
+
+    </body>
+
+</html>
