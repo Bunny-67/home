@@ -560,7 +560,7 @@ h1, h2, h3 {
   background-image: url("../images/photo_thumb.jpg");
 }
 .project-panel.videos::before {
-  background-image: url("assets/images/video_thumb.PNG");
+  background-image: url("../images/video_thumb.png");
 }
 .project-panel.graphics::before {
   background-image: url("../images/design_thumb.png");
