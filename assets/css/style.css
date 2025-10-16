@@ -349,13 +349,22 @@ h1, h2, h3 {
    PHOTO GALLERY PAGE — Edge-to-Edge Grid + Lightbox
    ========================================================= */
 
+/* =========================================================
+   PHOTO GALLERY — Pink→Purple Gradient
+   ========================================================= */
 .photo-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(135deg, #000, #1a1a1a, #2a2a2a, #1a1a1a);
-  background-size: 300% 300%;
-  animation: bwFlow 40s ease-in-out infinite alternate;
+  background: linear-gradient(135deg, #ff0077, #cc33ff, #6600cc, #9900ff);
+  background-size: 400% 400%;
+  animation: pinkPurpleFlow 25s ease-in-out infinite alternate;
+}
+
+@keyframes pinkPurpleFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .photo-gallery {
@@ -569,6 +578,24 @@ h1, h2, h3 {
   }
 }
 
+/* =========================================================
+   GRAPHICS GALLERY — Blue→Green Gradient
+   ========================================================= */
+
+.graphics-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #0033cc, #00aaff, #00cc88, #0066ff);
+  background-size: 400% 400%;
+  animation: blueGreenFlow 25s ease-in-out infinite alternate;
+}
+
+@keyframes blueGreenFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
 
 /* =========================================================
