@@ -485,6 +485,91 @@ h1, h2, h3 {
   }
 }
 
+/* =========================================================
+   PROJECTS LANDING PAGE
+   ========================================================= */
+
+.projects-landing {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+}
+
+.project-panel {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  transition: flex 0.6s ease, filter 0.4s ease;
+}
+
+/* Background image layer */
+.project-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6) grayscale(100%);
+  transition: filter 0.6s ease, transform 0.8s ease;
+  z-index: 0;
+}
+
+/* On hover, restore color and brighten */
+.project-panel:hover::before {
+  filter: brightness(1) grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Text overlay (no box or border) */
+.project-panel .overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-family: "ISOCTEUR V1";
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0.9;
+}
+
+.project-panel:hover .overlay {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.project-panel h1 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  margin: 0;
+}
+
+/* Thumbnail background images */
+.project-panel.photos::before {
+  background-image: url("../images/photo_thumb.jpg");
+}
+.project-panel.videos::before {
+  background-image: url("../images/video_thumb.png");
+}
+.project-panel.graphics::before {
+  background-image: url("../images/design_thumb.png");
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .projects-landing {
+    flex-direction: column;
+  }
+  .project-panel {
+    height: 33.3vh;
+  }
+}
+
+
 
 /* =========================================================
    FOOTER
