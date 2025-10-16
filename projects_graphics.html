@@ -1,209 +1,151 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<!--
-
-*****************************************************************************
-
-Title:  Graphics Page
-
-Use:  Graphics projects page of the site.
-
-Author:  Ian Ray
-
-School/Term:  Univ of Missouri, Fall 2023
-
-Developed: Oct. 7, 2023
-
-Tested:  , 2023; Passed on Chrome.
-
-******************************************************************************
-
--->
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graphic Design | Ian Ray</title>
 
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <script src="assets/js/java.js" defer></script>
 
-     <link rel="shortcut icon" type="image/x-icon" href="faviconv2.ico">
-
-    <link href="https://db.onlinewebfonts.com/c/037a670cefc97958beb036dab0f6e254?family=Bodoni+MT" rel="stylesheet"> <!--font-family: "Bodoni MT";-->
-    <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet"> <!--font-family: "ISOCTEUR V1";-->
-    <link href="https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script" rel="stylesheet"> <!--font-family: "Clicker Script";-->
-    <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet"> <!--font-family: "Montserrat";-->
-
-    <style>
-        h2 {
-            text-align: center;
-            font-family: "ISOCTEUR V1";
-            text-decoration: none;
-            text-transform: uppercase;
-            margin-top: 3vh; 
-            margin-left: 2vh;       
-        }
-
-        @media (max-width: 768px) {
-
-        }
-    </style>
-
-        <Simple Browser: Show></Simple> 
-
+  <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet" />
 </head>
 
 <body>
-    
-    <header>  
-        <div id="brand"><a href="/ISLT_7310/index">ianrayediting.com</a></div>
-            <nav class="navbar">
-                <ul>
-                    <li style="margin-left: 3.5vw;"><a href="/ISLT_7310/index">Home</a></li>
-                    <li><a href="/ISLT_7310/about">About</a></li>
-                    <li class="drop-menu-btn"><a href="#">Projects</a>
-                        <ul class="drop-menu-content"> 
-                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
-                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
-                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
-                        </ul>
-                    </li>
-                    <li style="margin-right: 3.5vw;"><a href="/ISLT_7310/contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div id="hamburger-icon", oninput="toggleMobileMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <ul class="mobile-menu">
-                    <li><a href="/ISLT_7310/index">Home</a></li>
-                    <li><a href="/ISLT_7310/about">About</a></li>
-                    <li><a href="/ISLT_7310/contact">Contact</a></li>
+  <!-- Header -->
+  <header>
+    <div id="brand"><a href="index.html">ianrayediting.com</a></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Artist Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu()">
+      <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Artist Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-                            <li id="mobile-sub-menu-btn" oninput="toggleMobileSubMenu(this)">
-                                    <a href="#">Projects  +</a>
-                                    <ul class="mobile-sub-menu">
-                                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
-                                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
-                                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
-                                    </ul>
-                            </li>
-                </ul>
+  <!-- Background -->
+  <div class="graphics-bg"></div>
 
-            </div>
+  <!-- Main Gallery -->
+  <main class="photo-gallery fade-in">
+    <h1 class="page-title">Graphic Design</h1>
 
-    </header>
+    <div class="gallery-grid">
+      <!-- 36 images -->
+      <!-- Replace file names or add captions as needed -->
+      <div class="gallery-item"><img src="assets/grph-gallery/grph1.png" alt="Graphic 1"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph2.png" alt="Graphic 2"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph3.png" alt="Graphic 3"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph4.png" alt="Graphic 4"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph5.png" alt="Graphic 5"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph6.png" alt="Graphic 6"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph7.png" alt="Graphic 7"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph8.png" alt="Graphic 8"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph9.png" alt="Graphic 9"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph10.png" alt="Graphic 10"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph11.png" alt="Graphic 11"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph12.png" alt="Graphic 12"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph13.png" alt="Graphic 13"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph14.png" alt="Graphic 14"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph15.png" alt="Graphic 15"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph16.png" alt="Graphic 16"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph17.png" alt="Graphic 17"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph18.png" alt="Graphic 18"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph19.png" alt="Graphic 19"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph20.png" alt="Graphic 20"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph21.png" alt="Graphic 21"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph22.png" alt="Graphic 22"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph23.png" alt="Graphic 23"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph24.png" alt="Graphic 24"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph25.png" alt="Graphic 25"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph26.png" alt="Graphic 26"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph27.png" alt="Graphic 27"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph28.png" alt="Graphic 28"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph29.png" alt="Graphic 29"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph30.png" alt="Graphic 30"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph31.png" alt="Graphic 31"></div>
+      <div class="gallery-item"><img src="assets/grph-gallery/grph32.png" alt="Graphic 32"></div>
+    </div>
+  </main>
 
-    <main>
-
-        <h2>Graphic Gallery</h2>
-        <a href="/ISLT_7310/p1digitalimagesgrph" style="font-size: 1vw; color: rgb(80,80,80); margin-left: 48%;">ISLT_4631</a>
-        <div class="div1"></div>
-        <div class="gallery">
-            <div class="gallery">
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph1.png" alt="Image 1">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph2.png" alt="Image 2">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph3.png" alt="Image 3">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph4.png" alt="Image 4">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph5.png" alt="Image 5">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph6.png" alt="Image 6">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph7.png" alt="Image 7">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph8.png" alt="Image 8">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph9.png" alt="Image 9">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph10.png" alt="Image 10">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph11.png" alt="Image 11">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph12.png" alt="Image 12">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph13.png" alt="Image 13">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph14.png" alt="Image 14">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph15.png" alt="Image 15">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph16.png" alt="Image 16">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph17.png" alt="Image 17">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph18.png" alt="Image 18">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph19.png" alt="Image 19">
-                </div>
-                <div class="image">
-                    <img src="/ISLT_7310/grph-gallery/grph20.png" alt="Image 20">
-                </div>
-            </div>
-        </div>
-    
-        <div class="fullscreen-container">
-            <img src="" alt="Fullscreen Image" id="fullscreen-image">
-            <span id="close-button">&times;</span>
-        </div>
-    
-    </main>   
-
-        <div class="div1"></div>
-        <div class="mobilediv0"></div>
+  <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-nav left">&#10094;</div>
+    <div class="lightbox-nav right">&#10095;</div>
+    </div>
 
 
-    <footer class="footer">
-        <div class="divF"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-icons">
+      <a href="contact.html"><img src="assets/images/emailicon.png" alt="Email" class="icon-anim" /></a>
+      <a href="contact.html"><img src="assets/images/phoneicon.png" alt="Phone" class="icon-anim" /></a>
+      <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="assets/images/yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" /></a>
+    </div>
+    <p>© 2025 Ian Ray | ianray.editing@gmail.com</p>
+  </footer>
 
-        <a href="/ISLT_7310/contact"><img src="emailicon.png" alt="Email" class="icon-anim" style="width:50px;height:50px;"></a>
-        <a href="/ISLT_7310/contact"><img src="phoneicon.png" alt="Phone" class="icon-anim" style="width:50px;height:50px;"></a>
-        <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" style="width:50px;height:50px;"></a>
+  <script>
+    /* =========================================================
+   LIGHTBOX FUNCTIONALITY FOR GRAPHICS GALLERY
+   ========================================================= */
+        const graphicsImages = document.querySelectorAll('.gallery-item img');
+        const graphicsLightbox = document.getElementById('lightbox');
+        const graphicsLightboxImg = graphicsLightbox.querySelector('.lightbox-img');
+        const graphicsCloseBtn = graphicsLightbox.querySelector('.lightbox-close');
+        const graphicsNavLeft = graphicsLightbox.querySelector('.lightbox-nav.left');
+        const graphicsNavRight = graphicsLightbox.querySelector('.lightbox-nav.right');
+        let graphicsIndex = 0;
 
+        function showGraphicsImage(index) {
+        const img = graphicsImages[index];
+        graphicsLightboxImg.src = img.src;
+        graphicsLightboxImg.alt = img.alt;
+        graphicsLightbox.classList.add('active');
+        graphicsIndex = index;
+        }
 
-    <p id="foot_txt">
-    Ian Ray <br>
-    Email: <br>
-    ianray.editing@gmail.com<br>
-    idry9v@umsystem.edu <br>
-    </p>
-    <p id="foot_txt2">
-                DISCLAIMER <br>
-                September 01, 2023 <br>
-                <br>
-                The information provided by Ian Ray Editing on https://ianrayediting.com is for general informational purposes only. All information on the Site <br>
-                is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, <br>
-                reliability, availability, or completeness of any information on the Site. <br>
-                UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE <br>
-                ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
-    </p>
-    </footer> 
-        <script src="java.js"></script>
-    </body>
+        graphicsImages.forEach((img, i) => {
+        img.addEventListener('click', () => showGraphicsImage(i));
+        });
 
+        graphicsCloseBtn.addEventListener('click', () => graphicsLightbox.classList.remove('active'));
+        graphicsLightbox.addEventListener('click', (e) => {
+        if (e.target === graphicsLightbox) graphicsLightbox.classList.remove('active');
+        });
+
+        graphicsNavLeft.addEventListener('click', () => {
+        graphicsIndex = (graphicsIndex - 1 + graphicsImages.length) % graphicsImages.length;
+        showGraphicsImage(graphicsIndex);
+        });
+
+        graphicsNavRight.addEventListener('click', () => {
+        graphicsIndex = (graphicsIndex + 1) % graphicsImages.length;
+        showGraphicsImage(graphicsIndex);
+        });
+
+        document.addEventListener('keydown', (e) => {
+        if (!graphicsLightbox.classList.contains('active')) return;
+        if (e.key === 'ArrowLeft') graphicsNavLeft.click();
+        if (e.key === 'ArrowRight') graphicsNavRight.click();
+        if (e.key === 'Escape') graphicsLightbox.classList.remove('active');
+        });
+
+  </script>
+</body>
 </html>
