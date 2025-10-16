@@ -346,8 +346,9 @@ h1, h2, h3 {
 }
 
 /* =========================================================
-   PHOTO GALLERY PAGE — Edge-to-Edge Grid + Lightbox
+   PHOTO GALLERY PAGE 
    ========================================================= */
+
 
 .photo-bg {
   position: fixed;
@@ -559,7 +560,7 @@ h1, h2, h3 {
   background-image: url("../images/photo_thumb.jpg");
 }
 .project-panel.videos::before {
-  background-image: url("../images/video_thumb.PNG");
+  background-image: url("../images/video_thumb.png");
 }
 .project-panel.graphics::before {
   background-image: url("../images/design_thumb.png");
@@ -647,4 +648,3 @@ h1, h2, h3 {
   opacity: 1;
   transform: translateY(0);
 }
-
