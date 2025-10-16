@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ian Ray | Portfolio</title>
+  <title>Projects | Ian Ray</title>
 
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/nav.css" />
@@ -19,36 +19,42 @@
     <nav class="navbar">
       <ul>
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
     <div id="hamburger-icon" onclick="toggleMobileMenu()">
       <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
       <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </header>
 
-  <!-- Clean Visual Landing -->
-  <main class="index-landing">
-  <div class="landing-bg"></div>
+  <!-- 3 FULL HEIGHT SECTIONS -->
+  <main class="projects-landing">
+    <a href="projects_photos.html" class="project-panel photos">
+      <div class="overlay">
+        <h1>Photography</h1>
+      </div>
+    </a>
 
-  <div class="landing-content fade-in">
-    <img src="assets/images/logo.png" alt="Ian Ray Logo" class="landing-logo" />
-    <h2 class="landing-subtitle">Digital Media Specialist</h2>
+    <a href="projects_videos.html" class="project-panel videos">
+      <div class="overlay">
+        <h1>Videography</h1>
+      </div>
+    </a>
 
-    <div class="landing-links">
-      <a href="projects.html" class="btn-primary">View Work</a>
-      <a href="reflection.html" class="btn-secondary">Artist Statement</a>
-    </div>
-  </div>
-</main>
-
-
+    <a href="projects_graphics.html" class="project-panel graphics">
+      <div class="overlay">
+        <h1>Graphic Design</h1>
+      </div>
+    </a>
+  </main>
 
   <footer class="footer">
     <div class="footer-icons">

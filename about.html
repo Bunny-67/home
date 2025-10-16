@@ -1,296 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
-<!--
-
-*****************************************************************************
-
-Title:  About Page
-
-Use:  To allow users to view Demo Reel and About Info.
-
-Author:  Ian Ray
-
-School/Term:  Univ of Missouri, Fall 2023
-
-Developed: Sep 1, 2023
-
-Tested:  Sep 2, 2023; Passed on Chrome.
-
-******************************************************************************
-
--->
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Ian Ray</title>
 
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="nav.css">
-     <script src="java.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <script src="assets/js/java.js" defer></script>
 
-     <link rel="shortcut icon" type="image/x-icon" href="faviconv2.ico">
-
-     <link href="https://db.onlinewebfonts.com/c/037a670cefc97958beb036dab0f6e254?family=Bodoni+MT" rel="stylesheet"> <!--font-family: "Bodoni MT";-->
-     <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet"> <!--font-family: "ISOCTEUR V1";-->
-     <link href="https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script" rel="stylesheet"> <!--font-family: "Clicker Script";-->
-     <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet"> <!--font-family: "Montserrat";-->
- 
-    <style>
-        .abtmain {
-            background-image: linear-gradient(180deg, rgb(20,20,20), rgb(131,197,197));
-            background-size: 100vw 100vh, 100vw 25vh;
-            background-position: top left, bottom right;
-            background-repeat: no-repeat, repeat;
-        }
-
-        .demoreel-box {
-            height: 80vh; width: 80vw;
-            margin-top: calc(5rem + 2vh);
-        }
-
-        .abt_para {
-            text-align: left;
-
-            font-size: 1.25vw;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            text-indent: 60px;
-        }
-        #abt_para_decobox {
-            width: 70%;
-            height: fit-content;
-            position: relative;
-            padding: 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 25px 20px 0px rgba(255, 255, 255, 0.75);
-            margin-left: -50px;
-            z-index: 2;
-        }
-        #abt_quote {
-            text-align: left;
-            margin: auto;
-            max-width: 55%;
-            font-size: 1vw;
-            font-weight: 200;
-            text-indent: 5vw;
-            padding: 2vw;
-            background-color: rgba(20,20,20,0.25);
-        }
-
-        #headshot_box {
-            height: calc(5vh + 20vw);
-            width: auto;
-            position: relative;
-            background-color: #ffffff1f;
-            margin-top: calc(-15vh - 13vw);
-            left: 26vw;
-            z-index: 3;
-            border-style: double;
-        }
-
-        #signature {
-            height: 7vw; width: 14vw;
-            margin-top: 2vh;
-            margin-bottom: 1vh;
-        }
-
-
-        @media only screen and (max-width: 1024px) {
-
-            .demoreel-box {
-            height: 50vh; width: 100vw;
-            margin-top: calc(5rem + 2vh);
-            }
-
-            .abt_para {
-                text-align: left;
-                padding: 5px;
-                font-size: 3.25vw;
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                text-indent: 60px;
-            }
-            #abt_para_decobox {
-                width: 100vw;
-                height: fit-content;
-                background-color: rgba(0, 0, 0, 0.5);
-                left: 0vw;
-                box-shadow: none;
-                margin-left: 0;
-            }
-            #abt_quote {
-                text-align: center;
-                margin: auto;
-                max-width: 85%;
-                font-size: 2vw;
-                font-weight: 200;
-                text-indent: 5vw;
-            }
-
-            #headshot_box {
-                display: none;
-            }
-            #signature {
-                height: 10vw; width: 25vw;
-                margin-top: 2vh;
-                margin-bottom: 1vh;
-                margin-left: 2vw;
-            }
-
-            .mobiledel {
-            display: none;
-            }
-
-        }
-        @media only screen and (max-width: 768px) {
-
-            .demoreel-box {
-            height: 45vh; width: 96vw;
-            margin-top: calc(5rem + 2vh);
-            margin-left: 2vw;
-            }
-
-    }
-
-
-    </style>
+  <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet" />
 </head>
 
-    <body style="background-color: rgb(131,197,197);">
-    
-        <header>  
-            <div id="brand"><a href="/ISLT_7310/index">ianrayediting.com</a></div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="/ISLT_7310/index">Home</a></li>
-                        <li class="drop-menu-btn"><a href="#">Projects</a>
-                            <ul class="drop-menu-content"> 
-                                <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
-                                <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
-                                <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
-                            </ul>
-                        </li>
-                        <li style="margin-right: 3.5vw;"><a href="/ISLT_7310/contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div id="hamburger-icon", oninput="toggleMobileMenu(this)">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                    <ul class="mobile-menu">
-                        <li><a href="/ISLT_7310/index">Home</a></li>
-                        <li><a href="/ISLT_7310/about">About</a></li>
-                        <li><a href="/ISLT_7310/contact">Contact</a></li>
-    
-                                <li id="mobile-sub-menu-btn" oninput="toggleMobileSubMenu(this)">
-                                        <a href="#">Projects  +</a>
-                                        <ul class="mobile-sub-menu">
-                                                <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
-                                                <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
-                                                <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
-                                        </ul>
-                                </li>
-                    </ul>
-    
-                </div>
-    
-        </header>
+<body>
+  <!-- Header -->
+  <header>
+    <div id="brand"><a href="index.html">ianrayediting.com</a></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Artist Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu()">
+      <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Artist Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-        
-    <main class="abtmain">
-        <div class="container">
+  <!-- Background -->
+  <div class="about-bg"></div>
 
-                <div class="row">
-                    <div class="column">
-                        <div class="demoreel-box">
-                            <iframe
-                                width="100%" height="100%" 
-                                src="https://www.youtube.com/embed/vHhr2saE1zI?si=LRJrSsU24hMOKDSU" 
-                                title="Ian Ray Video Editing Demo Reel" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
+  <!-- Main Content -->
+  <main class="about-content fade-in">
+    <h1 class="page-title">About Me</h1>
 
-                    <div class="div2"></div>
+    <!-- Demo Reel -->
+    <div class="about-video">
+      <iframe
+        src="https://www.youtube.com/embed/vHhr2saE1zI"
+        title="Ian Ray Demo Reel"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-                <div class="row">  
-                    <div class="column" id="abt_para_decobox">
-                            <p class="abt_para">   
-                                I am Ian Ray, a student currently enrolled at the <em>University of Missouri</em>. My studies revolve around media and design, 
-                                and I specialize in video editing and graphic design. I have worked hard in recent years to build a skill set that allows 
-                                me to be versatile in my work, and that gives me the ability to create media of any style for my clients. I focus on 
-                                attention to detail and a level of quality that others may not be willing to provide. 
-                            </p>
-                            
-                            <p class="abt_para">
-                                My skills include photo and video collection and editing, using tools such as Adobe Photoshop, Premiere, and Illustrator 
-                                to create videos, graphics, and other forms of media.<br class="mobiledel"> My experience in social media management and 
-                                strategic marketing allows me<br class="mobiledel"> to craft and deliver  ad campaigns 
-                                with visible impact. If you require media<br class="mobiledel"> services, please don't 
-                                hesitate to connect with me via email at <br class="mobiledel">
-                                <strong><em>ianray.editing@gmail.com</em></strong>. 
-                                To view my work, I invite you to 
-                                explore my <br class="mobiledel"> portfolio on this website.
-                            </p>
-                                
-                            <div id="signature">
-                                <img src="signatureW.png" alt="signature" height="100%" width="100%">
-                            </div>
-                            <a href="/ISLT_7310/rayresume.pdf" style="text-decoration: none; text-align: center; margin-top: 2vh;">
-                                <div class="button2 button2:hover">Resume</div>
-                            </a>
-                    </div>
-                        <div id="headshot_box">
-                            <img src="Headshot-min.png" alt="Headshot" height="100%" width="auto">
-                        </div>
-                </div>
-                    <div class="div3"></div>
-                <div class="row">  
-                    <div class="column"></div>
-                    <div class="column">
-                    <blockquote cite="https://sophicalcontent.com/freelancing-quotes/" id="abt_quote">
-                        'No matter how much experience you have, how many degrees you have, or how well-known you have become, there is always something new to learn. 
-                        Don't rest on your past experiences. If you do nothing to improve your skills, you won't stay where you are.'
-                        <br>
-                        <br>
-                            <strong>-Laura Spencer</strong>
-                    </blockquote>
-                </div>
-                <div class="column"></div>
-                <div class="div1"></div>
+    <!-- Glass Panel -->
+    <div class="about-panel">
+      <div class="about-text">
+        <p class="abt_para">
+          I am Ian Ray, a student currently enrolled at the <em>University of Missouri</em>. My studies revolve around media and design,
+          and I specialize in video editing and graphic design. I have worked hard in recent years to build a skill set that allows
+          me to be versatile in my work, and that gives me the ability to create media of any style for my clients. I focus on
+          attention to detail and a level of quality that others may not be willing to provide.
+        </p>
+
+        <p class="abt_para">
+          My skills include photo and video collection and editing, using tools such as Adobe Photoshop, Premiere, and Illustrator
+          to create videos, graphics, and other forms of media.<br class="mobiledel">
+          My experience in social media management and strategic marketing allows me<br class="mobiledel"> to craft and deliver ad campaigns
+          with visible impact. If you require media<br class="mobiledel"> services, please don't hesitate to connect with me via email at <br class="mobiledel">
+          <strong><em>ianray.editing@gmail.com</em></strong>.
+          To view my work, I invite you to explore my <br class="mobiledel"> portfolio on this website.
+        </p>
+
+        <blockquote cite="https://sophicalcontent.com/freelancing-quotes/" id="abt_quote">
+          'No matter how much experience you have, how many degrees you have, or how well-known you have become, there is always something new to learn.
+          Don't rest on your past experiences. If you do nothing to improve your skills, you won't stay where you are.'
+          <br><br>
+          <strong>- Laura Spencer</strong>
+        </blockquote>
+
+        <div id="signature">
+          <img src="assets/images/signatureW.png" alt="signature" height="100%" width="100%">
         </div>
-    </main>   
 
+        <a href="rayresume.pdf" class="resume-link">
+          <div class="button2">Resume</div>
+        </a>
+      </div>
 
-    <footer class="footer">
-        <div class="divF"></div>
+      <div id="headshot_box">
+        <img src="assets/images/headshot.png" alt="Headshot" height="100%" width="auto">
+      </div>
+    </div>
+  </main>
 
-        <a href="/ISLT_7310/contact"><img src="emailicon.png" alt="Email" class="icon-anim" style="width:50px;height:50px;"></a>
-        <a href="/ISLT_7310/contact"><img src="phoneicon.png" alt="Phone" class="icon-anim" style="width:50px;height:50px;"></a>
-        <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" style="width:50px;height:50px;"></a>
-
-
-    <p id="foot_txt">
-    Ian Ray <br>
-    Email: <br>
-    ianray.editing@gmail.com<br>
-    idry9v@umsystem.edu <br>
-    </p>
-    <p id="foot_txt2">
-                DISCLAIMER <br>
-                September 01, 2023 <br>
-                <br>
-                The information provided by Ian Ray Editing on https://ianrayediting.com is for general informational purposes only. All information on the Site <br>
-                is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, <br>
-                reliability, availability, or completeness of any information on the Site. <br>
-                UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE <br>
-                ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
-    </p>
-    </footer>  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-icons">
+      <a href="contact.html"><img src="assets/images/emailicon.png" alt="Email" class="icon-anim" /></a>
+      <a href="contact.html"><img src="assets/images/phoneicon.png" alt="Phone" class="icon-anim" /></a>
+      <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="assets/images/yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" /></a>
+    </div>
+    <p>© 2025 Ian Ray | ianray.editing@gmail.com</p>
+  </footer>
 </body>
-
 </html>

@@ -1,204 +1,186 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<!--
-
-*****************************************************************************
-
-Title:  Photos Page
-
-Use:  Photos projects page of the site.
-
-Author:  Ian Ray
-
-School/Term:  Univ of Missouri, Fall 2023
-
-Developed: Oct. 7, 2023
-
-Tested:  , 2023; Passed on Chrome.
-
-******************************************************************************
-
--->
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography | Ian Ray</title>
 
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" />
+  <script src="assets/js/java.js" defer></script>
 
-     <link rel="shortcut icon" type="image/x-icon" href="faviconv2.ico">
-
-    <link href="https://db.onlinewebfonts.com/c/037a670cefc97958beb036dab0f6e254?family=Bodoni+MT" rel="stylesheet"> <!--font-family: "Bodoni MT";-->
-    <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet"> <!--font-family: "ISOCTEUR V1";-->
-    <link href="https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script" rel="stylesheet"> <!--font-family: "Clicker Script";-->
-    <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet"> <!--font-family: "Montserrat";-->
-
-    <style>
-        h2 {
-            text-align: center;
-            font-family: "ISOCTEUR V1";
-            text-decoration: none;
-            text-transform: uppercase;
-            margin-top: 3vh; 
-            margin-left: 2vh;       
-        }
-    </style>
-
-        <Simple Browser: Show></Simple> 
-
+  <link href="https://db.onlinewebfonts.com/c/a96215c9d9ddf6f69b603c331081496e?family=ISOCTEUR+V1" rel="stylesheet" />
+  <link href="https://db.onlinewebfonts.com/c/5fc6f4fd75e944a52a342ab2c7f100f1?family=Montserrat" rel="stylesheet" />
 </head>
 
 <body>
-    
-    <header>  
-        <div id="brand"><a href="/ISLT_7310/index">ianrayediting.com</a></div>
-            <nav class="navbar">
-                <ul>
-                    <li style="margin-left: 3.5vw;"><a href="/ISLT_7310/index">Home</a></li>
-                    <li><a href="/ISLT_7310/about">About</a></li>
-                    <li class="drop-menu-btn"><a href="#">Projects</a>
-                        <ul class="drop-menu-content"> 
-                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
-                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
-                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
-                        </ul>
-                    </li>
-                    <li style="margin-right: 3.5vw;"><a href="/ISLT_7310/contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div id="hamburger-icon", oninput="toggleMobileMenu(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <ul class="mobile-menu">
-                    <li><a href="/ISLT_7310/index">Home</a></li>
-                    <li><a href="/ISLT_7310/about">About</a></li>
-                    <li><a href="/ISLT_7310/contact">Contact</a></li>
-
-                            <li id="mobile-sub-menu-btn" oninput="toggleMobileSubMenu(this)">
-                                    <a href="#">Projects  +</a>
-                                    <ul class="mobile-sub-menu">
-                                            <li><a href="/ISLT_7310/projects_photos">Photography</a></li>
-                                            <li><a href="/ISLT_7310/projects_videos">Videography</a></li>
-                                            <li><a href="/ISLT_7310/projects_graphics">Graphic Design</a></li>
-                                    </ul>
-                            </li>
-                </ul>
-
-            </div>
-
-    </header>
-
-    <main>
-
-        <h2>Photo Gallery</h2>
-        <div class="div1"></div>
-    <div class="gallery">
-        <div class="gallery">
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img1.jpg" alt="Image 1">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img2.jpg" alt="Image 2">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img3.jpg" alt="Image 3">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img4.jpg" alt="Image 4">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img5.jpg" alt="Image 5">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img6.jpg" alt="Image 6">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img7.jpg" alt="Image 7">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img8.jpg" alt="Image 8">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img9.jpg" alt="Image 9">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img10.jpg" alt="Image 10">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img11.jpg" alt="Image 11">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img12.jpg" alt="Image 12">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img13.jpg" alt="Image 13">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img14.png" alt="Image 14">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img15.png" alt="Image 15">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img16.jpg" alt="Image 16">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img17.jpg" alt="Image 17">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img18.jpg" alt="Image 18">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img19.jpg" alt="Image 19">
-            </div>
-            <div class="image">
-                <img src="/ISLT_7310/img-gallery/img20.jpg" alt="Image 20">
-            </div>
+  <!-- Header -->
+  <header>
+    <div id="brand"><a href="index.html">ianrayediting.com</a></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Artist Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="hamburger-icon" onclick="toggleMobileMenu()">
+      <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="reflection.html">Artist Statement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </div>
+  </header>
 
-    <div class="fullscreen-container">
-        <img src="" alt="Fullscreen Image" id="fullscreen-image">
-        <span id="close-button">&times;</span>
+  <!-- Background -->
+  <div class="photo-bg"></div>
+
+  <!-- Photo Grid -->
+  <main class="photo-gallery fade-in">
+    <h1 class="page-title">Photography</h1>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+  <img src="assets/img-gallery/img1.jpg" alt="Photo 1">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img2.jpg" alt="Photo 2">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img3.jpg" alt="Photo 3">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img4.jpg" alt="Photo 4">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img5.jpg" alt="Photo 5">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img6.jpg" alt="Photo 6">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img7.jpg" alt="Photo 7">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img8.jpg" alt="Photo 8">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img9.jpg" alt="Photo 9">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img10.jpg" alt="Photo 10">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img11.jpg" alt="Photo 11">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img12.jpg" alt="Photo 12">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img13.jpg" alt="Photo 13">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img14.jpg" alt="Photo 14">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img15.png" alt="Photo 15">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img16.png" alt="Photo 16">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img17.jpg" alt="Photo 17">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img18.jpg" alt="Photo 18">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img19.jpg" alt="Photo 19">
+</div>
+<div class="gallery-item">
+  <img src="assets/img-gallery/img20.jpg" alt="Photo 20">
+       <!-- data-caption="Description for image 20"
+       data-meta="Camera: Sony A7III | Lens: 35mm f/1.8 | ISO: 200 | Year: 2024" -->
+</div>
+
     </div>
+  </main>
 
-    
-    </main>   
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-info">
+      <div class="lightbox-meta"></div>
+      <div class="lightbox-caption"></div>
+    </div>
+    <div class="lightbox-nav left">&#10094;</div>
+    <div class="lightbox-nav right">&#10095;</div>
+  </div>
 
-        <div class="div1"></div>
-        <div class="mobilediv0"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-icons">
+      <a href="contact.html"><img src="assets/images/emailicon.png" alt="Email" class="icon-anim" /></a>
+      <a href="contact.html"><img src="assets/images/phoneicon.png" alt="Phone" class="icon-anim" /></a>
+      <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="assets/images/yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" /></a>
+    </div>
+    <p>© 2025 Ian Ray | ianray.editing@gmail.com</p>
+  </footer>
 
+  <script>
+    /* =========================================================
+       Lightbox Script with Keyboard Navigation
+       ========================================================= */
+    const images = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    const lightboxMeta = document.querySelector('.lightbox-meta');
+    const lightboxCaption = document.querySelector('.lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const navLeft = document.querySelector('.lightbox-nav.left');
+    const navRight = document.querySelector('.lightbox-nav.right');
+    let currentIndex = 0;
 
-    <footer class="footer">
-        <div class="divF"></div>
+    function showImage(index) {
+      const img = images[index];
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxMeta.textContent = img.dataset.meta || '';
+      lightboxCaption.textContent = img.dataset.caption || '';
+      lightbox.classList.add('active');
+      currentIndex = index;
+    }
 
-        <a href="/ISLT_7310/contact"><img src="emailicon.png" alt="Email" class="icon-anim" style="width:50px;height:50px;"></a>
-        <a href="/ISLT_7310/contact"><img src="phoneicon.png" alt="Phone" class="icon-anim" style="width:50px;height:50px;"></a>
-        <a href="https://www.youtube.com/channel/UCXRatvj5p5XcEfHOENdZIRg"><img src="yt_icon_mono_dark.png" alt="YouTube" class="icon-anim" style="width:50px;height:50px;"></a>
+    images.forEach((img, i) => {
+      img.addEventListener('click', () => showImage(i));
+    });
 
+    closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) lightbox.classList.remove('active');
+    });
 
-    <p id="foot_txt">
-    Ian Ray <br>
-    Email: <br>
-    ianray.editing@gmail.com<br>
-    idry9v@umsystem.edu <br>
-    </p>
-    <p id="foot_txt2">
-                DISCLAIMER <br>
-                September 01, 2023 <br>
-                <br>
-                The information provided by Ian Ray Editing on https://ianrayediting.com is for general informational purposes only. All information on the Site <br>
-                is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, <br>
-                reliability, availability, or completeness of any information on the Site. <br>
-                UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE <br>
-                ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
-    </p>
-    </footer> 
-        <script src="java.js"></script>
-    </body>
+    navLeft.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    });
 
+    navRight.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') navLeft.click();
+      if (e.key === 'ArrowRight') navRight.click();
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+</body>
 </html>
