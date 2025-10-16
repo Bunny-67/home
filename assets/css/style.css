@@ -1,0 +1,540 @@
+/* =========================================================
+   GLOBAL STYLES
+   ========================================================= */
+@font-face {
+  font-family: WarsawGothicExtended3D;
+  src: url("../fonts/WarsawGothicExtended3D-2q78.otf");
+}
+@font-face {
+  font-family: WarsawGothicExtendedOutline;
+  src: url("../fonts/WarsawGothicExtendedOutline-7q9V.otf");
+}
+@font-face {
+  font-family: WarsawGothicExtended;
+  src: url("../fonts/WarsawGothicExtended-K2Bo.otf");
+}
+
+:root {
+  --bg-dark: rgb(11, 21, 41);
+  --bg-accent: rgb(255, 255, 255);
+  --text-light: rgb(255, 255, 255);
+  --text-muted: rgb(180, 180, 180);
+  --font-header: "ISOCTEUR V1", sans-serif;
+  --font-body: "Montserrat", Arial, Helvetica, sans-serif;
+  --transition: 0.3s ease;
+
+  --grad-color1: rgb(0, 0, 0);
+  --grad-color2: rgb(28, 53, 165);
+  --grad-color3: rgb(123, 0, 139);
+  --angle1: 120deg;
+  --angle2: 240deg;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--text-light);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(to right, var(--bg-dark), rgb(11, 21, 47), var(--bg-dark));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--bg-accent);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-header);
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn-primary,
+.btn-secondary {
+  font-family: var(--font-header);
+  text-transform: uppercase;
+  padding: 0.9rem 2.5rem;
+  border: 2px solid var(--bg-accent);
+  color: var(--text-light);
+  border-radius: 2rem;
+  transition: var(--transition);
+  background: transparent;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background: var(--bg-accent);
+  color: black;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--bg-accent);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-accent);
+  color: black;
+}
+
+/* =========================================================
+   LANDING PAGE — Liquid Gradient + Depth
+   ========================================================= */
+.index-landing {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Dynamic liquid gradient background */
+.landing-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(var(--angle1), var(--grad-color1), var(--grad-color2), var(--grad-color3)),
+    linear-gradient(var(--angle2), var(--grad-color3), var(--grad-color2), var(--grad-color1));
+  background-blend-mode: screen;
+  background-size: 400% 400%;
+  animation: liquidFlow 18s ease-in-out infinite alternate;
+}
+
+/* Depth shimmer layer */
+.landing-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.05), transparent 60%),
+              radial-gradient(circle at 70% 70%, rgba(255,255,255,0.05), transparent 60%);
+  mix-blend-mode: overlay;
+  animation: shimmer 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Flow + shimmer animations */
+@keyframes liquidFlow {
+  0% { background-position: 0% 50%, 100% 50%; }
+  50% { background-position: 100% 50%, 0% 50%; }
+  100% { background-position: 0% 50%, 100% 50%; }
+}
+
+@keyframes shimmer {
+  from { transform: translateX(-5%) translateY(-5%); }
+  to { transform: translateX(5%) translateY(5%); }
+}
+
+/* Central content */
+.landing-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* Logo */
+.landing-logo {
+  width: clamp(200px, 30vw, 400px);
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  transition: transform 0.5s ease;
+}
+.landing-logo:hover {
+  transform: scale(1.03);
+}
+
+/* Subtitle */
+.landing-subtitle {
+  font-family: var(--font-header);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--bg-accent);
+  margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+.landing-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.landing-links a {
+  text-decoration: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .landing-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .landing-logo {
+    width: 60vw;
+  }
+}
+
+/* =========================================================
+   ABOUT PAGE — Frosted Glass + Monochrome Gradient
+   ========================================================= */
+
+.about-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #000, #1a1a1a, #2a2a2a, #1a1a1a);
+  background-size: 300% 300%;
+  animation: bwFlow 40s ease-in-out infinite alternate;
+}
+
+@keyframes bwFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 8rem auto 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.page-title {
+  font-family: "WarsawGothicExtended3D";
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 3rem;
+  letter-spacing: 0.1em;
+}
+
+/* Demo Reel */
+.about-video iframe {
+  width: 80vw;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  margin-bottom: 4rem;
+}
+
+/* Glass Panel */
+.about-panel {
+  position: relative;
+  display: inline-block;
+  padding: 3rem 4rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+  text-align: left;
+  max-width: 850px;
+  color: var(--text-light);
+}
+
+/* About Text */
+.about-text {
+  font-family: var(--font-body);
+  line-height: 1.8;
+  font-size: 1rem;
+  color: var(--text-light);
+  opacity: 0.9;
+  position: relative;
+}
+
+.abt_para {
+  margin-bottom: 1.4rem;
+}
+
+#abt_quote {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--bg-accent);
+  padding-left: 1rem;
+}
+
+#signature {
+  width: 200px;
+  margin-top: 2rem;
+}
+
+.resume-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.button2 {
+  font-family: var(--font-header);
+  border: 2px solid var(--bg-accent);
+  border-radius: 2rem;
+  padding: 0.7rem 2rem;
+  color: var(--text-light);
+  text-align: center;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.button2:hover {
+  background: var(--bg-accent);
+  color: #000;
+}
+
+/* Headshot */
+#headshot_box {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+}
+
+#headshot_box img {
+  width: 220px;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-panel {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  #headshot_box {
+    position: static;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  #headshot_box img {
+    width: 70vw;
+  }
+
+  .about-video iframe {
+    width: 95vw;
+  }
+}
+
+/* =========================================================
+   PHOTO GALLERY PAGE — Edge-to-Edge Grid + Lightbox
+   ========================================================= */
+
+.photo-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #000, #1a1a1a, #2a2a2a, #1a1a1a);
+  background-size: 300% 300%;
+  animation: bwFlow 40s ease-in-out infinite alternate;
+}
+
+.photo-gallery {
+  position: relative;
+  z-index: 1;
+  margin-top: 8rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* makes each thumbnail perfectly square */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures the image fills the square cleanly */
+  transition: transform 0.6s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 0.5rem;
+  transition: opacity 0.4s ease;
+}
+
+.lightbox-info {
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 80%;
+}
+
+.lightbox-meta {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.lightbox-caption {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Arrows */
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-nav:hover {
+  opacity: 0.6;
+}
+
+.lightbox-nav.left {
+  left: 2rem;
+}
+
+.lightbox-nav.right {
+  right: 2rem;
+}
+
+/* Close Button */
+.lightbox-close {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .lightbox-img {
+    max-width: 95%;
+    max-height: 70%;
+  }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-anim {
+  width: 45px;
+  height: 45px;
+  transform: scale(0.9);
+  transition: transform var(--transition);
+}
+
+.icon-anim:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   ANIMATIONS & EFFECTS
+   ========================================================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
