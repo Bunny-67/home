@@ -576,6 +576,151 @@ h1, h2, h3 {
   }
 }
 
+/* =========================================
+   Video Gallery
+   ========================================= */
+.video-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(circle at top left, rgba(255, 120, 120, 0.45), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(120, 140, 255, 0.45), transparent 55%),
+              linear-gradient(135deg, #050505, #000000);
+  background-attachment: fixed;
+}
+
+.video-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.video-section {
+  margin-bottom: 4rem;
+}
+
+.video-section-title {
+  font-family: 'ISOCTEUR V1', sans-serif;
+  color: var(--primary, #ffffff);
+  margin-bottom: 1.5rem;
+}
+
+/* Hero layout */
+.video-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.video-hero-text h2 {
+  margin-bottom: 0.75rem;
+}
+
+.video-hero-text p {
+  line-height: 1.6;
+}
+
+/* Shared video card/grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.featured-grid {
+  margin-top: 1.5rem;
+}
+
+.compact-grid .video-card {
+  padding: 0.5rem 0;
+}
+
+.video-card {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 18px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+.video-card h3 {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Two-column section for Harmony */
+.video-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.video-text p {
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive video frame */
+.video-frame {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* ServSafe placeholders */
+.video-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.video-section-intro {
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .video-hero,
+  .video-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .video-gallery {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .video-card {
+    padding: 0.75rem;
+  }
+}
+
+
 /* =========================================================
    GRAPHICS GALLERY — Blue→Green Gradient
    ========================================================= */
