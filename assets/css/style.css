@@ -308,7 +308,6 @@ h1, h2, h3 {
   color: #000;
 }
 
-/* Headshot */
 #headshot_box {
   position: absolute;
   bottom: -40px;
@@ -323,7 +322,6 @@ h1, h2, h3 {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .about-panel {
     padding: 2rem;
@@ -344,6 +342,76 @@ h1, h2, h3 {
     width: 95vw;
   }
 }
+
+/* =========================================================
+   ARTIST STATEMENT PAGE
+   ========================================================= */
+
+.reflection-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #050510, #111833, #26163f, #050510);
+  background-size: 300% 300%;
+  animation: reflectionFlow 40s ease-in-out infinite alternate;
+}
+
+@keyframes reflectionFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.reflection-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 8rem auto 4rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.reflection-panel {
+  position: relative;
+  display: inline-block;
+  padding: 3rem 4rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  text-align: left;
+  max-width: 850px;
+  color: var(--text-light);
+}
+
+.reflection-text {
+  font-family: var(--font-body);
+  line-height: 1.8;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.statement-para {
+  margin-bottom: 1.4rem;
+  text-indent: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .reflection-panel {
+    padding: 2rem;
+    margin: 0 1rem;
+  }
+
+  .reflection-text {
+    font-size: 0.95rem;
+  }
+
+  .statement-para {
+    text-indent: 1.5rem;
+  }
+}
+
 
 /* =========================================================
    PHOTO GALLERY PAGE 
@@ -400,7 +468,6 @@ h1, h2, h3 {
   opacity: 0.85;
 }
 
-/* Lightbox */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -444,7 +511,6 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
-/* Arrows */
 .lightbox-nav {
   position: fixed;
   top: 50%;
@@ -469,7 +535,6 @@ h1, h2, h3 {
   right: 2rem;
 }
 
-/* Close Button */
 .lightbox-close {
   position: fixed;
   top: 1rem;
@@ -514,7 +579,6 @@ h1, h2, h3 {
   transition: flex 0.6s ease, filter 0.4s ease;
 }
 
-/* Background image layer */
 .project-panel::before {
   content: "";
   position: absolute;
@@ -526,13 +590,11 @@ h1, h2, h3 {
   z-index: 0;
 }
 
-/* On hover, restore color and brighten */
 .project-panel:hover::before {
   filter: brightness(1) grayscale(0%);
   transform: scale(1.05);
 }
 
-/* Text overlay (no box or border) */
 .project-panel .overlay {
   position: relative;
   z-index: 1;
@@ -555,7 +617,6 @@ h1, h2, h3 {
   margin: 0;
 }
 
-/* Thumbnail background images */
 .project-panel.photos::before {
   background-image: url("../images/photo_thumb.jpg");
 }
@@ -566,7 +627,6 @@ h1, h2, h3 {
   background-image: url("../images/design_thumb.png");
 }
 
-/* Mobile: stack vertically */
 @media (max-width: 768px) {
   .projects-landing {
     flex-direction: column;
@@ -607,7 +667,6 @@ h1, h2, h3 {
   margin-bottom: 1.5rem;
 }
 
-/* Hero layout */
 .video-hero {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
@@ -624,7 +683,6 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
-/* Shared video card/grid */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -652,7 +710,6 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-/* Two-column section for Harmony */
 .video-two-column {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr);
@@ -665,7 +722,6 @@ h1, h2, h3 {
   margin-bottom: 0.75rem;
 }
 
-/* Responsive video frame */
 .video-frame {
   position: relative;
   width: 100%;
@@ -682,7 +738,6 @@ h1, h2, h3 {
   display: block;
 }
 
-/* ServSafe placeholders */
 .video-placeholder {
   display: flex;
   align-items: center;
@@ -702,7 +757,6 @@ h1, h2, h3 {
   margin-bottom: 1.75rem;
 }
 
-/* Responsive tweaks */
 @media (max-width: 900px) {
   .video-hero,
   .video-two-column {
@@ -722,7 +776,7 @@ h1, h2, h3 {
 
 
 /* =========================================================
-   GRAPHICS GALLERY — Blue→Green Gradient
+   GRAPHICS GALLERY
    ========================================================= */
 
 .graphics-bg {
@@ -739,7 +793,6 @@ h1, h2, h3 {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 
 /* =========================================================
    FOOTER
@@ -792,4 +845,199 @@ h1, h2, h3 {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =========================================================
+   CONTACT PAGE 
+   ========================================================= */
+
+.contact-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(120, 140, 255, 0.25), transparent 60%),
+    linear-gradient(135deg, #050505, #000000);
+  background-size: 200% 200%;
+  animation: bwFlow 35s ease-in-out infinite alternate;
+}
+
+.contact-page {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 7rem auto 4rem;
+  padding: 0 2rem 4rem;
+}
+
+.contact-intro {
+  max-width: 780px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.contact-card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+.contact-card h2 {
+  margin-bottom: 1.25rem;
+}
+
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.services-table thead {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.services-table th,
+.services-table td {
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+.services-table tbody {
+  background: rgba(15, 15, 15, 0.9);
+}
+
+.services-table tr:nth-child(even) {
+  background: rgba(30, 30, 30, 0.9);
+}
+
+.service-label {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.contact-form-card form {
+  display: block;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-field {
+  flex: 1;
+}
+
+.form-field label,
+.form-block .form-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-muted);
+}
+
+.required {
+  font-size: 0.8rem;
+  color: rgba(255, 180, 180, 0.9);
+}
+
+.contact-form-card input[type="text"],
+.contact-form-card input[type="email"],
+.contact-form-card textarea {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.contact-form-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.service-checkboxes {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.service-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.service-checkboxes input[type="checkbox"] {
+  transform: scale(1.05);
+}
+
+.other-service {
+  margin-top: 0.4rem;
+}
+
+.other-input {
+  margin-top: 0.35rem;
+}
+
+.form-block {
+  margin-bottom: 1.25rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.75rem;
+}
+
+.contact-submit {
+  font-size: 0.9rem;
+  padding-inline: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    justify-content: center;
+  }
+
+  .contact-submit {
+    width: 100%;
+    text-align: center;
+  }
 }
